@@ -7,7 +7,7 @@ https://enforcedata.dol.gov/views/data_summary.php ([mirror](https://enforcedata
 
 It then slices (i.e. "[stash](scripts/stash.py)") them into pieces small enough to upload onto Github, i.e. under 15MB (which is well under the 100MB-per-file limit) 
 
-The data can be found in the [data/stash](data/stash) folder, with each zip file getting its own subdiredtory, e.g. [data/stash/inspection](data/stash/inspection)
+The data can be found in the [data/stashed](data/stashed) folder, with each zip file getting its own subdirectory, e.g. [data/stashed/inspection](data/stashed/inspection)
 
 ## Purpose of this repo
 
