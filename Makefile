@@ -15,7 +15,6 @@ stash:
 	./scripts/stash.py
 
 
-
 ## collect phase
 collect: fetch unpack_zips
 
@@ -29,3 +28,10 @@ unpack_zips:
 
 fetch:
 	./scripts/collect/fetch_zips.py
+
+
+pushgit:
+	find data/stashed -type d | while read -r dname; do \
+		echo "$$dname" \
+		git add "$$dname" && git commit -m "dir: $$dname" && git push; \
+	done
