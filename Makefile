@@ -6,7 +6,7 @@ clean:
 
 
 help:
-	@echo 'Run `make ALL` to see how things run from scratch'
+	@echo 'Run `make collect` to collect the latest snapshot'
 
 ALL: collect stash
 
@@ -31,7 +31,8 @@ fetch:
 
 
 pushgit:
-	find data/stashed -type d | while read -r dname; do \
-		echo "$$dname" \
-		git add "$$dname" && git commit -m "dir: $$dname" && git push; \
-	done
+	./scripts/autogit.py
+# 	find data/stashed -type d | while read -r dname; do \
+# 		echo "$$dname" \
+# 		git add "$$dname" && git commit -m "dir: $$dname" && git push; \
+# 	done
